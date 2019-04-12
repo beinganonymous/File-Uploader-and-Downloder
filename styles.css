@@ -1,0 +1,288 @@
+#f{
+	font-family:Marker Felt;
+}
+
+#f1{
+	font-family:Comic Sans MS;
+}
+
+#nav{
+height:53px;
+background-color:transparent;
+top:0;
+left:250;
+display:inline-block;
+position:fixed;
+z-index:3000;
+}
+#nav_wrapper
+{
+	text-align:center;
+}
+#nav ul
+{
+color:white;
+font-size:20px;
+font-family:Marker Felt;
+position:fixed;
+border-radius:0px 0px 10px 10px;
+    list-style-type: none;
+    margin: 0;
+
+    
+    background-color:rgba(0, 0, 0, 0.65);
+}
+#nav ul li
+{
+color:white;
+float:left;
+display:inline-block;
+}
+#nav ul li a
+{
+    display: inline-block;
+    color: white;
+    text-align: center;
+	border-radius:0px;
+    padding: 16px 30px;
+    text-decoration: none;
+}
+#nav ul li:hover a,visited
+{
+background-color:white;
+color:#1e73be;
+border:2px;
+border-color:#1e73be;
+}
+#nav ul li a,visited
+{
+display:block;
+padding:15px;
+}
+#nav ul li:hover ul
+{
+display:block;
+color:#1e73be;
+}
+#nav ul ul
+{
+padding:5px 5px;
+border-radius:0px 20px 0px 20px;
+display : none;
+position:absolute;
+background-color:white;
+}
+
+#nav ul ul li a:hover{
+color:white;
+background-color:#1e73be;
+border-radius:12px;
+}
+
+.menubar
+{
+	
+	top:0;
+	left:250;
+	display:inline-block;
+	position:fixed;
+	z-index:3000;
+	
+}
+
+.start{
+	position: absolute;
+	    top: 100px;
+}
+
+
+::-webkit-scrollbar {
+      width: 15px;
+	  background-color:transparent;
+}
+::-webkit-scrollbar-track {
+	border-radius:20px;
+      background-color: rgba(125, 102, 209, 0.79);
+}
+ 
+::-webkit-scrollbar-thumb {
+	border-radius:20px;
+      background-color: rgba(255, 255, 255, 0.76); 
+}
+ 
+::-webkit-scrollbar-button {
+      background-color: #ffffff;
+}
+
+::-webkit-scrollbar-corner {
+      background-color: white;
+}
+
+
+
+.showdown {
+	cursor:pointer;
+position:fixed;
+visibility:none;
+bottom:10px;
+right:10px;
+    
+}
+
+.hidedown {
+position:fixed;
+visibility:hidden;
+bottom:10px;
+right:10px;
+    
+}
+
+.hidden {
+visibility:hidden;
+position:fixed;
+}
+
+
+.showup {
+	cursor:pointer;
+position:fixed;
+visibility:none;
+top:10px;
+right:10px;
+    
+}
+
+.hideup {
+position:fixed;
+visibility:hidden;
+top:10px;
+right:10px;
+    
+}
+
+
+/*slideshow==========================*/
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1200px;
+  max-height:480px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+.box {
+	
+    background-color:rgba(0, 0, 0, 0.21);
+    width: 300px;
+	color:white;
+	border-radius:0 20 0 20;
+	font-family:Noteworthy;
+    border: 20px solid rgba(255, 250, 250, 0.3);
+    padding: 25px;
+    margin: 25px;
+}
+.box2 {
+	
+    background-color:rgba(0, 0, 0, 0.21);
+    
+	color:white;
+	border-radius:0 20 0 20;
+	font-family:Noteworthy;
+    border: 20px solid rgba(255, 250, 250, 0.3);
+    padding: 25px;
+    margin: 25px;
+}
+.floatright{
+	margin: 25px;
+	float:right;
+}
+.floatleft{
+	margin: 25px;
+	float:left;
