@@ -1,4 +1,6 @@
  
+ 
+ 
 <?php
 include("mysqlconnect.php");
 
@@ -29,7 +31,7 @@ if (!empty($_FILES["uploadedimage"]["name"])) {
 
 if(move_uploaded_file($temp_name, $target_path)) {
 
- 	$query_upload="INSERT into images_tbl(images_path,submission_date) VALUES ('".$target_path."','".date("Y-m-d")."')";
+ 	$query_upload="INSERT into images_tbl(image_name,images_path,submission_date) VALUES ('".$imagename."','".$target_path."','".date("Y-m-d")."')";
 	mysqli_query($conn,$query_upload) or die("error in $query_upload == ----> ".mysqli_error($conn));  
 	
 }else{
@@ -39,23 +41,24 @@ if(move_uploaded_file($temp_name, $target_path)) {
 
 }
 
-$select_query = "SELECT images_path FROM images_tbl ORDER by images_id DESC";
-$sql = mysqli_query($conn,$select_query) or die(mysqli_error($conn));	
-while($row = mysqli_fetch_array($sql,MYSQLI_BOTH)){
+//$select_query = "SELECT images_path FROM images_tbl ORDER by images_id DESC";
+$select_name = "SELECT image_name FROM images_tbl ORDER by images_id DESC";
+//$sql = mysqli_query($conn,$select_query) or die(mysqli_error($conn));	
+$file_name = mysqli_query($conn,$select_name) or die(mysqli_error($conn));
+//$rs = mysql_fetch_array($file_name);
+while($row = mysqli_fetch_array($file_name,MYSQLI_BOTH)){
 
 ?>
-
-<table style="border-collapse: collapse; font: 12px Tahoma;" border="1" cellspacing="5" cellpadding="5">
-<tbody><tr>
-<td>
-<embed src="<?php echo $row["images_path"]; ?>" width="800px" height="2100px" />
-
-<!--img src="<?php echo $row["images_path"]; ?>" alt="Image" width="200" height="200"-->
-
-
-</td>
-</tr>
-</tbody></table>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="style/table.css">
+<div class="start" align="center">
+	<div class="floatleft">
+	<div class="tablebox">
+	<table>
+	  <tr>
+	    <td><a href="display_file.php"><?php echo $row["image_name"]; ?></a></td>
+	</table>
 
 <?php
 }
